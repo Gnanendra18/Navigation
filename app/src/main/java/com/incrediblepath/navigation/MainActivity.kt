@@ -1,5 +1,6 @@
 package com.incrediblepath.navigation
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
@@ -39,6 +40,7 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
         navigationView.setNavigationItemSelectedListener{
             if(it.itemId == R.id.first_item){
                 Toast.makeText(this,"show some action",Toast.LENGTH_LONG).show()
+                startActivity(Intent(this,BottomNavigationActivity::class.java))
                 drawerLayout.closeDrawer(GravityCompat.START,false)
             }
             true
