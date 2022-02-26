@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.incrediblepath.navigation.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_newSecondFragment"
+            app:destination="@id/newSecondFragment" />
+        <argument
+            android:name="for_home"
+            android:defaultValue="default args for home" />
+    </fragment>
+    <fragment
+        android:id="@+id/newSecondFragment"
+        android:name="com.incrediblepath.navigation.NewSecondFragment"
+        android:label="fragment_new_second"
+        tools:layout="@layout/fragment_new_second" >
+        <action
+            android:id="@+id/action_newSecondFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="data"
+            android:defaultValue="Default arguments" />
+    </fragment>
+</navigation>
