@@ -27,8 +27,8 @@ class FirstFragment : Fragment() {
             //Navigation.findNavController(view).navigate(action)
 
             //Third way of Navigation with arguments specifically from code
-            val action = FirstFragmentDirections.navigateToSecond("These arguments are sending from code")
-            Navigation.findNavController(view).navigate(action)
+            //val action = FirstFragmentDirections.navigateToSecond("These arguments are sending from code")
+            //Navigation.findNavController(view).navigate(action)
 
         }
         return view;
