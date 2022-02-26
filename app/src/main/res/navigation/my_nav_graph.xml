@@ -25,14 +25,21 @@
         android:name="com.incrediblepath.navigation.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" >
-        <action
-            android:id="@+id/navigate_to_first"
-            app:destination="@id/firstFragment"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right" />
         <argument
             android:name="data"
             app:argType="string"
             android:defaultValue="This is data by default we are sending from arguments inside navgraph xml" />
+        <action
+            android:id="@+id/action_secondFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.incrediblepath.navigation.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
     </fragment>
 </navigation>

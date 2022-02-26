@@ -20,7 +20,7 @@ class SecondFragment : Fragment() {
         val view =  inflater.inflate(R.layout.fragment_second, container, false)
         view.findViewById<TextView>(R.id.textView).text = args.data
         view.setOnClickListener{
-            Navigation.findNavController(view).navigate(R.id.navigate_to_first)
+            //Navigation.findNavController(view).navigate(R.id.navigate_to_first)
         }
         return view
     }
